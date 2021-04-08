@@ -48,19 +48,19 @@ class demcreate:
                 Добавляем текст в шаблон для демотиватора
                 
                 """
-                font_1 = ImageFont.truetype(font=fonttext, size=size2, encoding='UTF-8')
+                font_1 = ImageFont.truetype(font=f"/app/{fonttext}", size=size2, encoding='UTF-8')
                 textWidth = font_1.getsize(self._text1)[0]
                 
                 while textWidth >= (width+250) - 20:
-                        font_1 = ImageFont.truetype(font=fonttext, size=size2, encoding='UTF-8')
+                        font_1 = ImageFont.truetype(font=f"/app/{fonttext}", size=size2, encoding='UTF-8')
                         textWidth = font_1.getsize(self._text1)[0]
                         size2 -= 1
                     
-                font_2 = ImageFont.truetype(font=fonttext, size=size3, encoding='UTF-8')
+                font_2 = ImageFont.truetype(font=f"/app/{fonttext}", size=size3, encoding='UTF-8')
                 textWidth = font_2.getsize(self._text2)[0]
                 
                 while textWidth >= (width+250) - 20:
-                        font_2 = ImageFont.truetype(font=fonttext, size=size3, encoding='UTF-8')
+                        font_2 = ImageFont.truetype(font=f"/app/{fonttext}", size=size3, encoding='UTF-8')
                         textWidth = font_2.getsize(self._text2)[0]
                         size3 -= 1
                         
@@ -80,7 +80,7 @@ class demcreate:
                 
                 idraw.line((1000-len(text)*5,817, 1008+len(text)*5, 817), fill=0, width=4)
                 
-                font_2 = ImageFont.truetype(font=fonttext, size=20, encoding='UTF-8')
+                font_2 = ImageFont.truetype(font=f"/app/{fonttext}", size=20, encoding='UTF-8')
                 size_2 = idraw.textsize(text.lower(), font=font_2)
                 idraw.text((((width+729) - size_2[0]) / 2, ((height-192) - size_2[1])), text.lower(), font=font_2)
                 
@@ -114,19 +114,19 @@ class arrangedem:
 
                 """Определяем оптимальный размер шрифта"""
                 
-                font_1 = ImageFont.truetype(font=fonttext, size=50, encoding='UTF-8')
+                font_1 = ImageFont.truetype(font=f"/app/{fonttext}", size=50, encoding='UTF-8')
                 textWidth = font_1.getsize(self._text1)[0]
                 
                 while textWidth >= (width+250) - 20:
-                        font_1 = ImageFont.truetype(font=fonttext, size=size2, encoding='UTF-8')
+                        font_1 = ImageFont.truetype(font=f"/app/{fonttext}", size=size2, encoding='UTF-8')
                         textWidth = font_1.getsize(self._text1)[0]
                         size2 -= 1
 
-                font_2 = ImageFont.truetype(font=fonttext, size=30, encoding='UTF-8')
+                font_2 = ImageFont.truetype(font=f"/app/{fonttext}", size=30, encoding='UTF-8')
                 textWidth = font_2.getsize(self._text2)[0]
                 
                 while textWidth >= (width+250) - 20:
-                        font_2 = ImageFont.truetype(font=fonttext, size=size3, encoding='UTF-8')
+                        font_2 = ImageFont.truetype(font=f"/app/{fonttext}", size=size3, encoding='UTF-8')
                         textWidth = font_2.getsize(self._text2)[0]
                         size3 -= 1
 
